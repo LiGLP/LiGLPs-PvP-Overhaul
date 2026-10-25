@@ -1,5 +1,6 @@
 package com.liglp.pvpoverhaul;
 
+import com.liglp.pvpoverhaul.armorhud.ArmorHud;
 import com.liglp.pvpoverhaul.config.PvpConfig;
 import com.liglp.pvpoverhaul.gui.PauseMenuButton;
 import net.fabricmc.api.ClientModInitializer;
@@ -16,6 +17,7 @@ public class PvpOverhaul implements ClientModInitializer {
 	public void onInitializeClient() {
 		PvpConfig.load();
 		PauseMenuButton.register();
+		ArmorHud.register();
 
 		// Used by CI: apply every mixin once, then quit
 		if (Boolean.getBoolean("liglpspvp.audit")) {

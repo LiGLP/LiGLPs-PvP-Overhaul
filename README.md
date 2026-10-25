@@ -17,6 +17,12 @@ Press **Esc** and click the skin button left of **Options...** to open the setti
 - **No Crystal Explosion VFX**: hides explosion particles
 - **Lower Shield**: renders your shield lower in first person
 
+**Armor HUD** (own settings page, opened with the "Armor HUD..." button)
+- Shows the armor you are wearing in a small vanilla-style widget next to the hotbar
+- Warning icon and sound when a piece is about to break
+- Position, side, style, orientation, durability display (bar / number / percentage) and more can be changed
+- Optional key to toggle it (Options > Controls > Key Binds, unbound by default)
+
 Settings are saved to `config/liglps-pvp-overhaul.json`.
 
 ## Requirements
@@ -30,5 +36,11 @@ Settings are saved to `config/liglps-pvp-overhaul.json`.
 ```
 The jar ends up in `build/libs/`.
 
+## Credits
+- **Armor HUD** is based on [uku's Armor HUD](https://github.com/uku3lig/armor-hud)
+  by **BerdinskiyBear** and **uku**, used under the MIT License (see [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md)).
+  It works without ukulib.
+
 ## License
-GPL-3.0, see [LICENSE](LICENSE).
+GPL-3.0, see [LICENSE](LICENSE). Parts based on third-party code keep their original license,
+see [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md).

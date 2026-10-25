@@ -3,6 +3,7 @@ package com.liglp.pvpoverhaul.config;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.liglp.pvpoverhaul.PvpOverhaul;
+import com.liglp.pvpoverhaul.armorhud.ArmorHudConfig;
 import net.fabricmc.loader.api.FabricLoader;
 
 import java.io.IOException;
@@ -33,6 +34,9 @@ public final class PvpConfig {
 	public boolean noCrystalExplosionVfx = false;
 	public boolean lowerShield = false;
 
+	// Armor HUD
+	public ArmorHudConfig armorHud = new ArmorHudConfig();
+
 	public static PvpConfig get() {
 		return instance;
 	}
@@ -56,6 +60,10 @@ public final class PvpConfig {
 		try (Reader reader = Files.newBufferedReader(FILE)) {
 			PvpConfig loaded = GSON.fromJson(reader, PvpConfig.class);
 			if (loaded != null) {
+				if (loaded.armorHud == null) {
+					loaded.armorHud = new ArmorHudConfig();
+				}
+				loaded.armorHud.sanitize();
 				instance = loaded;
 			}
 		} catch (Exception e) {

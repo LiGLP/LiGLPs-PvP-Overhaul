@@ -9,7 +9,11 @@
 		"ItemInHandRendererMixin",
 		"LightTextureMixin",
 		"ScreenEffectRendererMixin",
-		"SoundEngineMixin"
+		"SoundEngineMixin",
+		"armorhud.ArmorHudGuiMixin",
+		"armorhud.BossHealthOverlayMixin",
+		"armorhud.InventoryMenuAccessor",
+		"armorhud.SubtitleOverlayMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

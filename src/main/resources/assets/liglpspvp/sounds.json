@@ -1,0 +1,9 @@
+{
+  "armor_breaking": {
+    "category": "player",
+    "subtitle": "subtitles.liglpspvp.armor_breaking",
+    "sounds": [
+      "liglpspvp:armor_breaking"
+    ]
+  }
+}

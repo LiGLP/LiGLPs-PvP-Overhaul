@@ -75,8 +75,13 @@ public class PvpSettingsScreen extends Screen {
 		toggle(right, y += ROW, "Lower Shield", "Renders your shield lower in first person.",
 				() -> config.lowerShield, v -> config.lowerShield = v);
 
+		this.addRenderableWidget(Button.builder(Component.literal("Armor HUD..."), b -> this.minecraft.setScreen(new ArmorHudSettingsScreen(this)))
+				.bounds(this.width / 2 - 100, columnTop + 5 * ROW + 4, 200, BUTTON_HEIGHT)
+				.tooltip(Tooltip.create(Component.literal("Shows your armor next to the hotbar and warns you before it breaks.")))
+				.build());
+
 		this.addRenderableWidget(Button.builder(CommonComponents.GUI_DONE, b -> this.onClose())
-				.bounds(this.width / 2 - 100, columnTop + 6 * ROW + 6, 200, BUTTON_HEIGHT)
+				.bounds(this.width / 2 - 100, columnTop + 6 * ROW + 10, 200, BUTTON_HEIGHT)
 				.build());
 
 		refreshAll();
