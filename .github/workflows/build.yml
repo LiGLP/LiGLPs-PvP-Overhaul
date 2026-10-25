@@ -1,0 +1,32 @@
+name: build
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v6
+      - name: validate gradle wrapper
+        uses: gradle/actions/wrapper-validation@v6
+      - name: setup jdk
+        uses: actions/setup-java@v5
+        with:
+          java-version: '25'
+          distribution: 'microsoft'
+      - name: make gradle wrapper executable
+        run: chmod +x ./gradlew
+      - name: build
+        run: ./gradlew build
+      - name: capture build artifacts
+        uses: actions/upload-artifact@v7
+        with:
+          name: liglps-pvp-overhaul
+          path: build/libs/
+      - name: install virtual display
+        run: sudo apt-get update -q && sudo apt-get install -y -q xvfb libgl1-mesa-dri
+      - name: check that all mixins apply
+        run: |
+          timeout 900 xvfb-run -a -s "-screen 0 1280x720x24" ./gradlew runAuditClient 2>&1 | tee run.log
+          grep -q "Mixin audit finished" run.log
+          if grep -E "InvalidInjectionException|Mixin apply.*failed|Critical injection failure|InvalidMixinException" run.log; then exit 1; fi

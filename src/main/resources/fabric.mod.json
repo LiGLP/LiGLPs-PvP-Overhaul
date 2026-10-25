@@ -1,0 +1,30 @@
+{
+	"schemaVersion": 1,
+	"id": "liglpspvp",
+	"version": "${version}",
+	"name": "LiGLP's PvP Overhaul",
+	"description": "Client-side PvP tweaks: clear water/lava/powder snow, crystal PvP tweaks, fullbright and no fire overlay.",
+	"authors": [
+		"LiGLP"
+	],
+	"contact": {
+		"sources": "https://github.com/LiGLP/LiGLPs-PvP-Overhaul"
+	},
+	"license": "GPL-3.0-only",
+	"icon": "assets/liglpspvp/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"com.liglp.pvpoverhaul.PvpOverhaul"
+		]
+	},
+	"mixins": [
+		"liglpspvp.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
