@@ -21,7 +21,7 @@ Settings are saved to `config/liglps-pvp-overhaul.json`.
 
 ## Requirements
 - Minecraft 1.21.11
-- Fabric Loader 0.20.1+
+- Fabric Loader 0.17.0+
 - Fabric API
 
 ## Building
