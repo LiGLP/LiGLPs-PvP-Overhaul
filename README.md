@@ -25,8 +25,9 @@ Press **Esc** and click the skin button left of **Options...** to open the setti
 
 **Sword PvP** (own settings page, opened with the "Sword PvP..." button)
 - **Low Health Alert**: plays a note block sound once when your health drops to the set number of hearts (0.5 - 10)
-- **W-Tap Alert**: after you hit something, plays a note block sound as soon as your attack is fully charged again,
-  so you know when to W-tap and hit
+- **W-Tap Alert**: after you hit something, plays a note block sound as soon as you can really W-tap and hit again:
+  your attack is fully charged **and** the target lost its damage immunity (its red hurt animation is over).
+  No sound when the target died, despawned or is out of range
 - Every alert has its own instrument (all 16 note block instruments) and note (0 - 24, like a note block),
   plus a shared volume and test buttons
 

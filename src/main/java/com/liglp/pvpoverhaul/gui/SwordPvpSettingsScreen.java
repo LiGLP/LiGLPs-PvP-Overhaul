@@ -49,7 +49,7 @@ public class SwordPvpSettingsScreen extends Screen {
 
 		// W-tap alert
 		AbstractWidget wTap = ConfigWidgets.toggle("W-Tap Alert", config.wTapAlert, v -> config.wTapAlert = v);
-		wTap.setTooltip(Tooltip.create(Component.literal("After you hit something, plays a note block sound as soon as your attack is fully charged again, so you know when to W-tap and hit.")));
+		wTap.setTooltip(Tooltip.create(Component.literal("After you hit something, plays a note block sound as soon as you can really W-tap and hit again: your attack is fully charged and the target can take damage and knockback again.")));
 		this.list.addRow(List.of(wTap));
 		this.list.addRow(List.of(
 				ConfigWidgets.cycle("Sound", NoteSound.values(), config.wTapSound, s -> s.label, v -> config.wTapSound = v),
