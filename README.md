@@ -23,6 +23,13 @@ Press **Esc** and click the skin button left of **Options...** to open the setti
 - Position, side, style, orientation, durability display (bar / number / percentage) and more can be changed
 - Optional key to toggle it (Options > Controls > Key Binds, unbound by default)
 
+**Sword PvP** (own settings page, opened with the "Sword PvP..." button)
+- **Low Health Alert**: plays a note block sound once when your health drops to the set number of hearts (0.5 - 10)
+- **W-Tap Alert**: after you hit something, plays a note block sound as soon as your attack is fully charged again,
+  so you know when to W-tap and hit
+- Every alert has its own instrument (all 16 note block instruments) and note (0 - 24, like a note block),
+  plus a shared volume and test buttons
+
 Settings are saved to `config/liglps-pvp-overhaul.json`.
 
 ## Requirements

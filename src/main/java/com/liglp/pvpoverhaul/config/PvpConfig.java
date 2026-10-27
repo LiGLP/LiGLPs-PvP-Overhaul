@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.liglp.pvpoverhaul.PvpOverhaul;
 import com.liglp.pvpoverhaul.armorhud.ArmorHudConfig;
+import com.liglp.pvpoverhaul.swordpvp.SwordPvpConfig;
 import net.fabricmc.loader.api.FabricLoader;
 
 import java.io.IOException;
@@ -37,6 +38,9 @@ public final class PvpConfig {
 	// Armor HUD
 	public ArmorHudConfig armorHud = new ArmorHudConfig();
 
+	// Sword PvP sound alerts
+	public SwordPvpConfig swordPvp = new SwordPvpConfig();
+
 	public static PvpConfig get() {
 		return instance;
 	}
@@ -64,6 +68,10 @@ public final class PvpConfig {
 					loaded.armorHud = new ArmorHudConfig();
 				}
 				loaded.armorHud.sanitize();
+				if (loaded.swordPvp == null) {
+					loaded.swordPvp = new SwordPvpConfig();
+				}
+				loaded.swordPvp.sanitize();
 				instance = loaded;
 			}
 		} catch (Exception e) {

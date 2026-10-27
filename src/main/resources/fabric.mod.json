@@ -3,7 +3,7 @@
 	"id": "liglpspvp",
 	"version": "${version}",
 	"name": "LiGLP's PvP Overhaul",
-	"description": "Client-side PvP tweaks: clear water/lava/powder snow, crystal PvP tweaks, fullbright, no fire overlay and an armor HUD.\n\nArmor HUD based on uku's Armor HUD by BerdinskiyBear and uku (MIT).",
+	"description": "Client-side PvP tweaks: clear water/lava/powder snow, crystal PvP tweaks, fullbright, no fire overlay, an armor HUD and sword PvP sound alerts.\n\nArmor HUD based on uku's Armor HUD by BerdinskiyBear and uku (MIT).",
 	"authors": [
 		"LiGLP"
 	],

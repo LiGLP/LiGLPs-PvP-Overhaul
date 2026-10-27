@@ -3,6 +3,7 @@ package com.liglp.pvpoverhaul;
 import com.liglp.pvpoverhaul.armorhud.ArmorHud;
 import com.liglp.pvpoverhaul.config.PvpConfig;
 import com.liglp.pvpoverhaul.gui.PauseMenuButton;
+import com.liglp.pvpoverhaul.swordpvp.SwordPvp;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientLifecycleEvents;
 import org.slf4j.Logger;
@@ -18,6 +19,7 @@ public class PvpOverhaul implements ClientModInitializer {
 		PvpConfig.load();
 		PauseMenuButton.register();
 		ArmorHud.register();
+		SwordPvp.register();
 
 		// Used by CI: apply every mixin once, then quit
 		if (Boolean.getBoolean("liglpspvp.audit")) {

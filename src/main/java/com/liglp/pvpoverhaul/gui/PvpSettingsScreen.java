@@ -76,8 +76,13 @@ public class PvpSettingsScreen extends Screen {
 				() -> config.lowerShield, v -> config.lowerShield = v);
 
 		this.addRenderableWidget(Button.builder(Component.literal("Armor HUD..."), b -> this.minecraft.setScreen(new ArmorHudSettingsScreen(this)))
-				.bounds(this.width / 2 - 100, columnTop + 5 * ROW + 4, 200, BUTTON_HEIGHT)
+				.bounds(left, columnTop + 5 * ROW + 4, BUTTON_WIDTH, BUTTON_HEIGHT)
 				.tooltip(Tooltip.create(Component.literal("Shows your armor next to the hotbar and warns you before it breaks.")))
+				.build());
+
+		this.addRenderableWidget(Button.builder(Component.literal("Sword PvP..."), b -> this.minecraft.setScreen(new SwordPvpSettingsScreen(this)))
+				.bounds(right, columnTop + 5 * ROW + 4, BUTTON_WIDTH, BUTTON_HEIGHT)
+				.tooltip(Tooltip.create(Component.literal("Note block sounds for low health and for when you can W-tap and hit again.")))
 				.build());
 
 		this.addRenderableWidget(Button.builder(CommonComponents.GUI_DONE, b -> this.onClose())
