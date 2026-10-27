@@ -65,6 +65,6 @@ public final class SwordPvp {
 	public static void play(NoteSound sound, int note) {
 		// Same pitch as a note block: note 12 is the normal pitch, 0 and 24 are one octave lower/higher
 		float pitch = (float) Math.pow(2.0, (note - 12) / 12.0);
-		Minecraft.getInstance().getSoundManager().play(SimpleSoundInstance.forUI(sound.sound, pitch, (float) config().volume));
+		Minecraft.getInstance().getSoundManager().play(SimpleSoundInstance.forUI(sound.sound.value(), pitch, (float) config().volume));
 	}
 }
